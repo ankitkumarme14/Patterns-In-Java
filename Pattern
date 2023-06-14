@@ -1,0 +1,529 @@
+package patteren_By_Striver_1;
+
+import java.util.Scanner;
+
+/*
+	 * Q1. : Pattern :  * * * * *
+	 *  				* * * * *
+	 *  				* * * * *
+	 *  				* * * * *
+	 * 					* * * * *
+	 * 
+	 * 
+	 * Q2. : Pattern :  * 
+	 *  				* * 
+	 *  				* * * 
+	 *  				* * * * 
+	 * 					* * * * *
+	 * 
+	 * 
+	 * Q3. : Pattern :  1 
+	 *  				1 2 
+	 *  				1 2 3
+	 *  				1 2 3 4
+	 * 					1 2 3 4 5
+	 * 
+	 * Q4. : Pattern :  1 
+	 *  				2 2 
+	 *  				3 3 3
+	 *  				4 4 4 4
+	 * 					5 5 5 5 5
+	 * 
+	 * 
+	 * Q5. : Pattern :  * * * * *
+	 *  				* * * * 
+	 *  				* * *
+	 *  				* *
+	 *  				*
+	 *  
+	 *  
+	 * Q6. : Pattern :  1 2 3 4 5
+	 *  				1 2 3 4
+	 *  				1 2 3
+	 *  				1 2
+	 *  				1
+	 *  
+	 *  
+	 * Q7. : Pattern :      *
+	 *  				   ***
+	 *  				  *****
+	 *  				 *******
+	 *  				*********
+	 *  
+	 *  
+	 * Q8. : Pattern :  *********
+	 *  			     *******   
+	 *  				  *****
+	 *  				   ***
+	 *  				    *
+	 *  
+	 *  
+	 * Q9. : Pattern :      *
+	 *  				   ***
+	 *  				  *****
+	 *  				 *******
+	 *  				*********
+	 *                  *********
+	 *  			     *******   
+	 *  				  *****
+	 *  				   ***
+	 *  				    *
+	 *  
+	 *  
+	 * Q10. : Pattern : *
+	 *  				**
+	 *  				***
+	 *  				****
+	 *  				*****
+	 *                  ****
+	 *  			    ***   
+	 *  			    **
+	 *  				*
+	 *  
+	 *  
+	 * Q11. : Pattern : 1
+	 *  				01
+	 *  				101
+	 *  				0101
+	 *  				10101
+	 *  
+	 *  
+	 * Q12. : Pattern : 1      1
+	 *  				12    21
+	 *  				123  321
+	 *  				12344321
+	 *  
+	 *  				
+	 * Q13. : Pattern : 1
+	 *  				2 3
+	 *  				4 5 6
+	 *  				7 8 9 10
+	 *  				11 12 13 14 15	
+	 *  
+	 *  
+	 * Q14. : Pattern :	A
+	 * 					A B
+	 * 					A B C
+	 * 					A B C D
+	 * 					A B C D E	 
+	 *    
+	 * 
+	 * Q15. : Pattern :	A B C D E
+	 * 					A B C D
+	 * 					A B C 
+	 * 					A B
+	 * 					A 
+	 * 
+	 * 
+	 * Q16. : Pattern :	A
+	 * 					B B
+	 * 					C C C
+	 * 					D D D D
+	 * 					E E E E E
+	 * 
+	 * 
+	 */
+public class Test_1{
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter ther number :");
+		int n= scan.nextInt();
+		
+		pattern1(n);
+		System.out.println("---------------------------------------");
+		
+		pattern2(n);
+		System.out.println("---------------------------------------");
+		
+		pattern3(n);
+		System.out.println("---------------------------------------");
+		
+		pattern4(n);
+		System.out.println("---------------------------------------");
+		
+		pattern5(n);
+		System.out.println("---------------------------------------");
+		
+		pattern6(n);
+		System.out.println("---------------------------------------");
+		
+		pattern7(n);
+		System.out.println("---------------------------------------");
+		
+		pattern8(n);
+		System.out.println("---------------------------------------");
+		
+		// pattern 9(pattern7+8)
+		pattern7(n);
+		pattern8(n);
+		System.out.println("---------------------------------------");
+		
+		pattern9(n);
+		System.out.println("---------------------------------------");
+		
+		pattern10(n);
+		System.out.println("---------------------------------------");
+		
+		pattern11(n);
+		System.out.println("---------------------------------------");
+		
+		pattern12(n);
+		System.out.println("---------------------------------------");
+		
+		pattern13(n);
+		System.out.println("---------------------------------------");
+		
+		pattern14(n);
+		System.out.println("---------------------------------------");
+		
+		pattern15(n);
+		System.out.println("---------------------------------------");
+		
+		pattern16(n);
+		System.out.println("---------------------------------------");
+		
+	}
+	
+	// Q1 
+	public static void pattern1(int n) {
+		for(int i=0; i<n; i++) {
+			for(int j=0; j<n; j++) {
+				System.out.print("* ");
+			}
+			System.out.println();
+		}
+	}
+
+	
+	// Q2
+	public static void pattern2(int n) {
+		for(int i=0; i<n; i++) {  //0 1 2 3 4
+			for(int j=0; j<=i; j++) { //0 01 012 0123 01234
+				System.out.print("* ");
+			}
+			System.out.println();
+		}
+		
+//		for(int i=1; i<=n; i++) {  
+//			for(int j=1; j<=i; j++) { 
+//				System.out.print("* ");
+//			}
+//			System.out.println();
+//		}
+	}
+	
+	
+	// Q3.
+	public static void pattern3(int n) {
+		for(int i=1; i<=n; i++) {
+			for(int j=1; j<=i; j++ ) {
+				System.out.print(j+" ");
+			}
+			System.out.println();
+		}
+	}
+	
+	
+	// Q4
+	public static void pattern4(int n) {
+		for(int i=1; i<=n; i++) {
+			for(int j=1; j<=i; j++) {
+				System.out.print(i+" ");
+			}
+			System.out.println();
+		}
+	}
+	
+	
+	//Q5  formula : (n-row+1)
+	public static void pattern5(int n) {
+		for(int i=1; i<=n; i++) {
+			for(int j=1; j<=(n-i+1); j++) {
+				System.out.print("* ");
+			}
+			System.out.println();
+		}
+	}
+	
+	
+	// Q6
+	public static void pattern6(int n) {
+		for(int i=1; i<=n; i++) {
+			for(int j=1; j<=(n-i+1); j++) {
+				System.out.print(j+" ");
+			}
+			System.out.println();
+		}
+	}
+	
+	
+	// Q7
+	public static void pattern7(int n) {
+		for(int i=0; i<n; i++) {
+			
+		// for space
+			for(int j=0; j<n-i-1; j++) {
+				System.out.print(" ");
+			}
+			
+		// for star
+			for(int j=0; j<(2*i)+1; j++) {
+				System.out.print("*");
+			}
+			
+			
+		// for space
+			for(int j=0; j<n-i-1; j++) {
+				System.out.print(" ");
+			}
+			System.out.println();
+		}	
+	}
+	
+	
+	// Q8
+	public static void pattern8(int n) {
+		for(int i=0; i<n; i++) {
+			
+			// for space
+			for(int j=0; j<i; j++) {
+				System.out.print(" ");	
+			}
+			
+			// for star
+			for(int j=0; j<2*n-(2*i+1); j++) {
+				System.out.print("*");
+			}
+			
+			// for space
+			for(int j=0; j<i; j++) {
+				System.out.print(" ");	
+			}
+			System.out.println();
+		}
+	}
+	
+	// Q9
+	public static void pattern9(int n) {
+		
+		//  from Q7
+		for(int i=0; i<n; i++) {
+			
+			// for space
+				for(int j=0; j<n-i-1; j++) {
+					System.out.print(" ");
+				}
+				
+			// for star
+				for(int j=0; j<(2*i)+1; j++) {
+					System.out.print("*");
+				}
+				
+				
+			// for space
+				for(int j=0; j<n-i-1; j++) {
+					System.out.print(" ");
+				}
+				System.out.println();
+			}
+		
+			// from Q8
+			for(int i=0; i<n; i++) {
+			
+			// for space
+			for(int j=0; j<i; j++) {
+				System.out.print(" ");	
+			}
+			
+			// for star
+			for(int j=0; j<2*n-(2*i+1); j++) {
+				System.out.print("*");
+			}
+			
+			// for space
+			for(int j=0; j<i; j++) {
+				System.out.print(" ");	
+			}
+			System.out.println();
+		}
+		
+		
+		
+//		 for(int i=1; i<=n; i++){
+//	            // for space
+//	            for(int j=1; j<n-i+1; j++){
+//	                System.out.print(" ");
+//	            }
+//
+//	            // for star
+//	            for(int j=1; j<=2*i-1; j++){
+//	                System.out.print("*");
+//	            }
+//
+//	            // for space
+//	            for(int j=1; j<n-i+1; j++){
+//	                System.out.print(" ");
+//	            }
+//	            System.out.println();
+//	        }
+//
+//	         for(int i=1; i<=n; i++){
+//
+//	            // for space
+//	            for(int j=1; j<i; j++){
+//	                System.out.print(" ");
+//	            }
+//
+//	            // for star
+//	            for(int j=1; j<=2*n-(2*i-1); j++){
+//	                System.out.print("*");
+//	            }
+//
+//	            // for space
+//	            for(int j=1; j<i; j++){
+//	                System.out.print(" ");
+//	            }
+//	            System.out.println();
+//	        }
+		
+	}
+	
+	
+	// Q10
+	public static void pattern10(int n) {
+		for(int i=1; i<=2*n-1; i++) {
+			
+			int star=i;
+			if(i>n) {
+				star=2*n-i;
+			}
+			
+			for(int j=1; j<=star; j++) {
+				System.out.print("*");
+			}
+			
+			System.out.println();
+		}
+		
+	}
+	
+	//Q11
+	public static void pattern11(int n) {
+		int start=1;
+		for(int i=0; i<n; i++) {
+			if(i%2==0) {
+				start=1;
+			}else {
+				start=0;
+			}
+			
+			for(int j=0; j<=i; j++) {
+				System.out.print(start);
+				start=1-start;      // split
+			}
+			System.out.println();
+		}
+	}
+	
+	
+	// Q12
+	public static void pattern12(int n) {
+//		int space=2*(n-1);
+//		
+//		for(int i=1; i<=n; i++) {
+//			
+//			// number
+//			for(int j=1; j<=i; j++) {
+//				System.out.print(j);
+//			}
+//			
+//			//space
+//			for(int j=1; j<=space; j++) {
+//				System.out.print(" ");
+//			}
+//			
+//			//number
+//			for(int j=i; j>=1; j--) {
+//				System.out.print(j);
+//			}
+//			System.out.println();
+//			space=space-2;
+//		}
+		
+		
+		int space=2*(n-1);
+        for(int i=1; i<=n; i++){
+            
+            // number
+            for(int j=1; j<=i; j++){
+                System.out.print(j);
+            }
+            
+            //space
+            for(int j=1; j<=space; j++){
+                System.out.print(" ");
+            }
+            
+            //number
+            for(int j=i; j>=1; j--){
+                System.out.print(j);
+            }
+            
+            System.out.println();
+            space=space-2;
+            
+        }
+	}
+	
+	// Q 13
+	public static void pattern13(int n) {
+		int num=1; 
+		for(int i=1; i<=n; i++) {
+		
+			for(int j=1; j<=i; j++) {
+				System.out.print(num+" ");
+				num=num+1;
+			}
+			System.out.println();
+		}
+	}
+	
+	//Q 14
+	public static void pattern14(int n) {
+		for(int i=0; i<n; i++) {	
+			for(char ch='A'; ch<='A'+i; ch++) {
+				System.out.print(ch+" ");
+			}
+			System.out.println();
+		}
+	}
+	
+	//Q 15
+	public static void pattern15(int n) {
+		for(int i=0; i<n; i++) {
+			for(char ch='A'; ch<'A'+n-i; ch++) {
+				System.out.print(ch+" ");
+			}
+			System.out.println();
+		}
+	}
+	
+	//Q 16
+	public static void pattern16(int n) {
+		for(int i=0; i<n; i++) {
+			char ch=(char) ('A'+i);
+			for(int j=0; j<=i; j++) {
+				System.out.print(ch+" ");
+			}
+			System.out.println();
+		}
+	}
+}
+
+
+
+
+
+
+
+
